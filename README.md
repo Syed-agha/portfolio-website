@@ -3,7 +3,7 @@
 This is my personal portfolio website built using HTML, CSS, and JavaScript.
 
 ## 🔗 Live Site
-[Visit Portfolio Website](https://your-username.github.io/portfolio-website/)
+[Visit Portfolio Website](https://syed-agha.github.io/portfolio-website)
 
 ## 📂 Technologies Used
 - HTML
