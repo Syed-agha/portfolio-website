@@ -636,7 +636,6 @@ body {
 
 /* Hamburger styles */
 .hamburger {
-  display: none;
   font-size: 28px;
   color: white;
   cursor: pointer;
@@ -644,7 +643,6 @@ body {
 
 /* Mobile nav styles */
 .mobile-nav {
-  display: none;
   flex-direction: column;
   background-color: #222;
   position: absolute;
@@ -670,11 +668,14 @@ body {
 /* Media query for mobile */
 @media (max-width: 768px) {
   .desktop-nav {
-    display: none;
+    display: none !important;
   }
 
   .hamburger {
     display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
   }
 
   .nav-link,
@@ -686,4 +687,15 @@ body {
 /* Show mobile nav when active */
 .mobile-nav.show {
   display: flex;
+}
+
+/* On desktop, hide hamburger and mobile nav */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
 }
