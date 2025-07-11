@@ -683,10 +683,6 @@ body {
   }
 }
 
-.social-icons{
-  display: none;
-}
-
 /* Show mobile nav when active */
 .mobile-nav.show {
   display: flex;
