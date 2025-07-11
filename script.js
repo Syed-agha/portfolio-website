@@ -2,15 +2,31 @@
 document.addEventListener("DOMContentLoaded", function () {
   const mainHeader = document.getElementById("header");
   const stickyHeader = document.getElementById("sticky-header");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
 
-  window.addEventListener("scroll", () => {
-    const triggerHeight = mainHeader.offsetHeight;
-
-    if (window.scrollY > triggerHeight) {
-      stickyHeader.classList.add("visible");
+  // Show sticky nav only on desktop
+  function handleStickyHeader() {
+    if (window.innerWidth > 768) {
+      const triggerHeight = mainHeader.offsetHeight;
+      if (window.scrollY > triggerHeight) {
+        stickyHeader.classList.add("visible");
+      } else {
+        stickyHeader.classList.remove("visible");
+      }
     } else {
-      stickyHeader.classList.remove("visible");
+      stickyHeader.classList.remove("visible"); // always hide on mobile
     }
+  }
+
+  // Initial check and on scroll
+  window.addEventListener("scroll", handleStickyHeader);
+  window.addEventListener("resize", handleStickyHeader);
+  handleStickyHeader(); // run on load too
+
+  // Hamburger toggle for mobile
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("open");
   });
 });
 
