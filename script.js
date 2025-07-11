@@ -14,6 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// highlighting the header buttons when on that page start
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.href;
+
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute("href");
+
+    if (currentPage.includes(linkHref)) {
+      link.classList.add("active");
+    }
+  });
+});
+// highlighting the header buttons when on that page end
+
 // home animation start
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("typewriter-container");
@@ -55,6 +70,30 @@ document.addEventListener("DOMContentLoaded", () => {
   loopLines(); // Start the animation
 });
 // home animation end
+
+// list dropdown start
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.skills-toggle');
+    const list = document.querySelector('.skills-list');
+
+    toggle.addEventListener('click', () => {
+      list.classList.toggle('hidden');
+      toggle.classList.toggle('active');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.card-toggle');
+
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        content.classList.toggle('hidden');
+        toggle.classList.toggle('active');
+      });
+    });
+  });
+// list dropdown end
 
 // scroll to top button start
 document.addEventListener("DOMContentLoaded", () => {
