@@ -584,3 +584,36 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
+/* mobile responsiveness */
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Fix wide nav spacing */
+@media (max-width: 768px) {
+  #header,
+  #sticky-header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 10px;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .projects-container {
+    padding: 0 10px;
+  }
+}
