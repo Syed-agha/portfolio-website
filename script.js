@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   handleStickyHeader(); // run on load too
 
   // Hamburger toggle for mobile
-  hamburger.addEventListener("click", function () {
+  hamburger.addEventListener("click", () => {
     mobileNav.classList.toggle("show");
   });
 });
