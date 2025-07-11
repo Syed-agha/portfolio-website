@@ -1,9 +1,9 @@
-// header scroll 
+// header scroll start
 document.addEventListener("DOMContentLoaded", function () {
   const mainHeader = document.getElementById("header");
   const stickyHeader = document.getElementById("sticky-header");
   const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
+  const navLinks = document.getElementById("mobileNav");
 
   // Show sticky nav only on desktop
   function handleStickyHeader() {
@@ -26,9 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Hamburger toggle for mobile
   hamburger.addEventListener("click", function () {
-    navLinks.classList.toggle("open");
+    mobileNav.classList.toggle("show");
   });
 });
+//header scroll end
 
 // highlighting the header buttons when on that page start
 document.addEventListener("DOMContentLoaded", function () {
