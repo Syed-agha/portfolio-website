@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainHeader = document.getElementById("header");
   const stickyHeader = document.getElementById("sticky-header");
   const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("mobileNav");
+  const mobileNav = document.getElementById("mobileNav");
 
   // Show sticky nav only on desktop
   function handleStickyHeader() {
