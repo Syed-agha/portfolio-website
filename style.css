@@ -17,6 +17,26 @@ body {
     align-items: center;
 }
 
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Common active page highlight */
+nav a.active {
+  background-color: #b1004b;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+/* Optional hover consistency */
+nav a:hover {
+  background-color: #b1004b;
+  color: black !important;
+}
+
+
 /* Sticky header (hidden until scroll) */
 #sticky-header {
     position: fixed;
@@ -46,6 +66,7 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
 nav {
@@ -66,7 +87,6 @@ nav a:hover {
 }
 
 nav .contact-btn {
-    background-color: #b1004b;
     padding: 8px 16px;
     border-radius: 8px;
     color: white;
@@ -95,7 +115,7 @@ nav li {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 50px;
+    padding: 60px 60px;
     background-color: #111;
     color: white;
     border-radius: 8px;
@@ -292,30 +312,42 @@ section {
     border-radius: 8px;
 }
 
-/* education 8*/
-#education {
-  color: black;
-  background-color: white;
-  padding: 2rem;
+/* Education & Skills Section */
+#education-skills {
+  color: white;
+  background-color: black;
+  padding: 1.3rem;
+  border-radius: 8px;
 }
 
+/* Education Grid */
 .education-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center;
 }
 
+/* Education + Skills Cards */
 .edu-card {
-  background: #1a1a1a;
+  background:  rgba(128, 128, 128, 0.242);
   border-radius: 15px;
   padding: 1.5rem;
-  /* border: 1px solid #ff0055; */ /* optional red border */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(128, 128, 128, 0.242);
   transition: transform 0.3s;
+  width: 300px; /* fixed width for consistency */
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+@media (max-width: 768px) {
+  .edu-card {
+    width: 100%;
+  }
 }
 
 .edu-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(207, 3, 3, 0.705);
 }
 
 .edu-card h3 {
@@ -326,6 +358,75 @@ section {
 
 .edu-card p {
   color: #ccc;
+}
+
+/* Dropdown Arrow + Toggle */
+.card-toggle {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-toggle .arrow {
+  transition: transform 0.3s ease;
+}
+
+.card-toggle.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Content */
+.card-content {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.card-content.hidden {
+  display: none;
+}
+
+.skills-list {
+  padding-left: 20px;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+/* Skills Dropdown */
+.skills-toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.skills-toggle .arrow {
+  transition: transform 0.3s ease;
+}
+
+.skills-list {
+  margin-top: 15px;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.skills-list.hidden {
+  display: none;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+/* Rotate arrow when active */
+.skills-toggle.active .arrow {
+  transform: rotate(180deg);
 }
 
 /* projects */
@@ -409,7 +510,7 @@ section {
 .contact-card,
 a.contact-card {
     background-color: #1c1c1c;
-    padding: 30px;
+    padding: 1rem;
     border-radius: 20px;
     width: 280px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -423,6 +524,13 @@ a.contact-card {
 
 .contact-card:hover {
     transform: translateY(-10px);
+}
+
+.contact-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; /* Ensures the link wraps around the card block-style */
+  width: 100%; /* Optional: ensures it behaves like a full card */
 }
 
 /* Icon Styling */
