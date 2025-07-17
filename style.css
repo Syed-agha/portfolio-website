@@ -651,25 +651,26 @@ body {
   background-color: #222;
   position: absolute;
   text-align: right;
-  top: 60 px;
-  left: o;
+  top: 60px;         /* ✅ fix typo: remove space in `60 px` */
+  left: 0;           /* ✅ fix typo: change `left: o` to `left: 0` */
   width: 100%;
-  padding: 10px 6px;
+  padding: 0;        /* ✅ remove padding that causes alignment issue */
   z-index: 999;
+  box-sizing: border-box; /* ✅ ensures borders and padding stay within width */
 }
 
 .mobile-nav a {
   color: white;
-  padding: 10px 6px;
+  padding: 14px 20px;  /* ✅ equal left and right padding for better alignment */
   text-decoration: none;
   border-bottom: 1px solid #444;
+  box-sizing: border-box; /* ✅ prevents overflow */
 }
 
 .mobile-nav a:hover {
   background-color: #b1004b;
   color: black;
 }
-
 /* Media query for mobile */
 @media (max-width: 768px) {
   .desktop-nav {
