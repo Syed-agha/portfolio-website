@@ -654,13 +654,13 @@ body {
   top: 60 px;
   left: o;
   width: 100%;
-  padding: 10px 10px;
+  padding: 10px 6px;
   z-index: 999;
 }
 
 .mobile-nav a {
   color: white;
-  padding: 12px 10px;
+  padding: 10px 6px;
   text-decoration: none;
   border-bottom: 1px solid #444;
 }
