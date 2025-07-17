@@ -650,16 +650,17 @@ body {
   flex-direction: column;
   background-color: #222;
   position: absolute;
+  text-align: right;
   top: 60 px;
   left: o;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 10px;
   z-index: 999;
 }
 
 .mobile-nav a {
   color: white;
-  padding: 12px 15px;
+  padding: 12px 10px;
   text-decoration: none;
   border-bottom: 1px solid #444;
 }
