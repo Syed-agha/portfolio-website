@@ -603,7 +603,7 @@ body {
   /* Adjust header layout */
   #header, #sticky-header {
     flex-direction: row;
-    justify content: space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
   }
