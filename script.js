@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("typewriter-container");
   const lines = [
-    "Computer Science Student",
+    "CS Student",
     "Freelancer",
     "Web Developer"
   ];
@@ -169,3 +169,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // scroll to top button end
+
