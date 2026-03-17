@@ -1,126 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Agha | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syed Agha | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-<header id="header">
-       <div class="logo">
-        <a href="index.html">Syed Agha</a>
-       </div>
+  <!-- Cursor -->
+  <div id="cur"></div>
+  <div id="cur2"></div>
 
-    <nav class="nav-links desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="about_portfolio.html">About</a>
-        <a href="projects_portfolio.html">Projects</a>
-        <a href="contact_portfolio.html" class="contact-btn">Contact</a>
-    </nav>
+  <!-- Falling leaves canvas -->
+  <canvas id="leaf-canvas"></canvas>
 
-    <div class="social-icons desktop-nav">
-        <a href="https://www.instagram.com/agha_unseen/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/syed-agha-b89116306/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/Syed-agha?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a>
+  <!-- ═══════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════ -->
+  <nav id="nav">
+    <div class="n-logo">Syed Agha</div>
+    <ul class="n-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HOME
+  ═══════════════════════════════════════ -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <!-- Left text -->
+    <div class="hero-left">
+      <div class="h-badge">
+        <span class="h-badge-dot"></span>Available for opportunities
+      </div>
+      <h1 class="h-name">
+        <span class="ln1">Syed</span>
+        <span class="ln2">Agha.</span>
+      </h1>
+      <p class="h-role">
+        <strong>CS Student &amp; Full-Stack Developer</strong> based in Haripur, Pakistan.
+        Passionate about building clean, meaningful applications.
+      </p>
+      <div class="h-btns">
+        <a href="#projects" class="btn-pine">View My Work</a>
+        <a href="#contact"  class="btn-light">Get In Touch</a>
+      </div>
     </div>
 
-	 <div class="hamburger" id="hamburger">&#9776;</div>
-</header>
-	
-    <!-- sticky header-->
-<header id="sticky-header">
-       <div class="logo">
-        <a href="index.html">Syed Agha</a>
-       </div>
+    <!-- Right 3D photo -->
+    <div class="hero-right">
+      <div class="photo-3d-wrap" id="photo3d">
+        <div class="orbit-ring">
+          <div class="orbit-dot"></div>
+        </div>
+        <div class="photo-frame">
+          <img
+            src="photo.PNG"
+            alt="Syed Agha"
+            onerror="this.src='WhatsApp Image 2025-06-30 at 10.45.26 AM.jpeg'">
+        </div>
+        <div class="float-tag ft1"><span class="ft-dot"></span>CS Student</div>
+        <div class="float-tag ft2"><span class="ft-dot"></span>Full-Stack Dev</div>
+        <div class="float-tag ft3"><span class="ft-dot"></span>Problem Solver</div>
+      </div>
+    </div>
+  </section>
 
-  <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about_portfolio.html">About</a>
-        <a href="projects_portfolio.html">Projects</a>
-        <a href="contact_portfolio.html" class="contact-btn">Contact</a>
-    </nav>
+  <!-- ═══════════════════════════════════════
+       STATS
+  ═══════════════════════════════════════ -->
+  <div class="stats">
+    <div class="stat reveal"><div class="stat-n">2+</div><div class="stat-l">Years Coding</div></div>
+    <div class="stat reveal"><div class="stat-n">3</div><div class="stat-l">Projects Built</div></div>
+    <div class="stat reveal"><div class="stat-n">9+</div><div class="stat-l">Technologies</div></div>
+    <div class="stat reveal"><div class="stat-n">∞</div><div class="stat-l">Curiosity</div></div>
+  </div>
 
-  <div class="social-icons">
-        <a href="https://www.instagram.com/agha_unseen/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/syed-agha-b89116306/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/Syed-agha?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a>
-   </div>
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-grid">
 
-</header>
+      <!-- Bio + Education -->
+      <div>
+        <div class="sec-tag">About</div>
+        <h2 class="sec-h reveal">The <em>Developer</em></h2>
+        <div class="a-body reveal">
+          <p>Motivated CS student at <strong>Pak Austria Fachhochschule</strong>, Haripur —
+            dedicated to continuous learning and building full-stack applications that solve real problems.</p>
+          <p>Self-directed and energetic, I thrive in both collaborative and independent environments,
+            always driven by curiosity and a passion for clean code.</p>
+        </div>
+        <div class="edu-list">
+          <div class="edu-item reveal">
+            <span class="edu-yr-badge">2023–Now</span>
+            <div>
+              <div class="edu-d">BS Computer Science</div>
+              <div class="edu-s">Pak Austria Fachhochschule, Haripur</div>
+            </div>
+          </div>
+          <div class="edu-item reveal">
+            <span class="edu-yr-badge">2021–2023</span>
+            <div>
+              <div class="edu-d">Intermediate (Pre-Engineering)</div>
+              <div class="edu-s">Math, Physics &amp; Chemistry</div>
+            </div>
+          </div>
+          <div class="edu-item reveal">
+            <span class="edu-yr-badge">2019–2021</span>
+            <div>
+              <div class="edu-d">Matriculation</div>
+              <div class="edu-s">Science &amp; Mathematics</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- Mobile Menu -->
-<nav class="mobile-nav" id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="about_portfolio.html">About</a>
-  <a href="projects_portfolio.html">Projects</a>
-  <a href="contact_portfolio.html" class="contact-btn">Contact</a>
-</nav>
-	
-    <section id="home" class="hero">
-    <div class="hero-text">
-        <h5>Hello</h5>
-        <h2>I'm Syed Agha a</span></h2>
-        <h2 class="highlight" id="typewriter-container"></h2>
-        <p>
-            Passionate about creating full-stack web applications and continuously learning new technologies.
-        </p>
-
-	<a href="projects_portfolio.html" class="view-portfolio-btn">View Portfolio <i class="fa-solid fa-arrow-right"></i></a>
+      <!-- Skills -->
+      <div>
+        <div class="sec-tag">Skills</div>
+        <h2 class="sec-h reveal">Tech <em>Stack</em></h2>
+        <div class="skill-wrap" id="skill-wrap">
+          <div class="sk-row reveal" data-w="85">
+            <div class="sk-top"><span class="sk-name">HTML</span><span class="sk-pct">85%</span></div>
+            <div class="sk-track"><div class="sk-fill"></div></div>
+          </div>
+          <div class="sk-row reveal" data-w="80">
+            <div class="sk-top"><span class="sk-name">CSS</span><span class="sk-pct">80%</span></div>
+            <div class="sk-track"><div class="sk-fill"></div></div>
+          </div>
+          <div class="sk-row reveal" data-w="65">
+            <div class="sk-top"><span class="sk-name">JavaScript</span><span class="sk-pct">65%</span></div>
+            <div class="sk-track"><div class="sk-fill"></div></div>
+          </div>
+          <div class="sk-row reveal" data-w="75">
+            <div class="sk-top"><span class="sk-name">C++</span><span class="sk-pct">75%</span></div>
+            <div class="sk-track"><div class="sk-fill"></div></div>
+          </div>
+          <div class="sk-row reveal" data-w="70">
+            <div class="sk-top"><span class="sk-name">Python</span><span class="sk-pct">70%</span></div>
+            <div class="sk-track"><div class="sk-fill"></div></div>
+          </div>
+          <div class="sk-row reveal" data-w="60">
+            <div class="sk-top"><span class="sk-name">PHP + MySQL</span><span class="sk-pct">60%</span></div>
+            <div class="sk-track"><div class="sk-fill"></div></div>
+          </div>
+          <div class="sk-row reveal" data-w="55">
+            <div class="sk-top"><span class="sk-name">Bash / C</span><span class="sk-pct">55%</span></div>
+            <div class="sk-track"><div class="sk-fill"></div></div>
+          </div>
+        </div>
+      </div>
 
     </div>
+  </section>
 
-    <div class="hero-img">
-        <img src="WhatsApp Image 2025-06-30 at 10.45.26 AM.jpeg" alt="Ameer Agha">
+  <!-- ═══════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════ -->
+  <section id="projects">
+    <div style="max-width:1200px;margin:0 auto 4rem;">
+      <div class="sec-tag">My Work</div>
+      <h2 class="sec-h reveal">Selected <em>Projects</em></h2>
     </div>
-</section>
+    <div class="proj-grid">
 
+      <div class="pc reveal">
+        <div class="pc-num">01</div>
+        <div class="pc-icon">🌐</div>
+        <div class="pc-tag">Web Development</div>
+        <div class="pc-title">Portfolio Website</div>
+        <p class="pc-desc">Modern, responsive portfolio with animated typewriter effect and smooth navigation — built entirely from scratch.</p>
+        <div class="pc-techs">
+          <span class="ptag">HTML</span>
+          <span class="ptag">CSS</span>
+          <span class="ptag">JavaScript</span>
+        </div>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-container">
+      <div class="pc reveal">
+        <div class="pc-num">02</div>
+        <div class="pc-icon">📅</div>
+        <div class="pc-tag">Full-Stack</div>
+        <div class="pc-title">Event Management System</div>
+        <p class="pc-desc">Dynamic platform for creating and managing events. DSA-powered search with PHP backend and MySQL integration.</p>
+        <div class="pc-techs">
+          <span class="ptag">PHP</span>
+          <span class="ptag">MySQL</span>
+          <span class="ptag">DSA</span>
+          <span class="ptag">JS</span>
+        </div>
+      </div>
 
-        <a href="https://www.google.com/maps/place/Pak-Austria+Fachhochschule+Institute+of+Applied+Sciences+and+Technology/@33.9088335,72.9154297,17z/data=!3m1!4b1!4m6!3m5!1s0x38dfb1ec2cec8405:0xecea542d8a6b1d0a!8m2!3d33.9088291!4d72.9180046!16s%2Fg%2F11g9vs92nm?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" 
-   target="_blank" class="contact-card contact-link" >
-    <div class="icon">📍</div>
-    <h3>Address</h3>
-    <p>Pak Austria fachhochschule, mang rd ,Haripur</p>
-</a>
-
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=agha69428@gmail.com" target="_blank" class="contact-card">
-  <div class="icon">✉️</div>
-  <h3>E-Mail</h3>
-  <p>agha69428@gmail.com</p>
-</a>
-
-<a href="https://wa.me/923404634839?text=Hi%2C%20I%20saw%20your%20portfolio!" target="_blank" class="contact-card">
-  <div class="icon">📞</div>
-  <h3>Call Me</h3>
-  <p>0340-4634839</p>
-</a>
+      <div class="pc reveal">
+        <div class="pc-num">03</div>
+        <div class="pc-icon">🗂️</div>
+        <div class="pc-tag">Systems Programming</div>
+        <div class="pc-title">File Management System</div>
+        <p class="pc-desc">OS-level menu-driven file operations built with Shell Scripting and C via direct system calls.</p>
+        <div class="pc-techs">
+          <span class="ptag">Bash</span>
+          <span class="ptag">C</span>
+          <span class="ptag">OS Concepts</span>
+        </div>
+      </div>
 
     </div>
-</section>
+  </section>
 
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact">
+    <div style="max-width:1000px;margin:0 auto 4rem;">
+      <div class="sec-tag">Reach Out</div>
+      <h2 class="sec-h reveal">Get In <em>Touch</em></h2>
+    </div>
+    <div class="contact-inner">
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Ameer Agha. All rights reserved.</p>
-    </footer>
+      <!-- Info -->
+      <div>
+        <div class="ci-item reveal">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-lbl">Location</div>
+            <div class="ci-val">Pak Austria Fachhochschule,<br>Mang Rd, Haripur</div>
+          </div>
+        </div>
+        <div class="ci-item reveal">
+          <div class="ci-icon">✉️</div>
+          <div>
+            <div class="ci-lbl">Email</div>
+            <div class="ci-val">
+              <a href="mailto:agha69428@gmail.com">agha69428@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="ci-item reveal">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-lbl">WhatsApp</div>
+            <div class="ci-val">
+              <a href="https://wa.me/923404634839?text=Hi%2C%20I%20saw%20your%20portfolio!" target="_blank">0340-4634839</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- Scroll to Top Button -->
-<div id="scrollBtn">
-  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-    <path id="wave1" />
-    <path id="wave2" />
-  </svg>
-  <i class="fa-solid fa-arrow-up"></i>
-</div>
+      <!-- Form -->
+      <div class="form-wrap reveal">
+        <input    class="ff" type="text"  placeholder="Your name">
+        <input    class="ff" type="email" placeholder="Your email">
+        <textarea class="ff"              placeholder="Your message..."></textarea>
+        <button   class="ff-btn">Send Message →</button>
+      </div>
 
-<script src="script.js"></script>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <div class="fl">Syed Agha</div>
+    <div class="fc">© 2025 — All Rights Reserved</div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="st">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
