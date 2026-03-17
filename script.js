@@ -150,3 +150,47 @@ document.querySelectorAll('.pc').forEach(card => {
 document.getElementById('st').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+/* ── Contact Form (Formspree) ── */
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn        = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg   = document.getElementById('form-error');
+
+    // Reset state
+    successMsg.style.display = 'none';
+    errorMsg.style.display   = 'none';
+    btn.textContent          = 'Sending...';
+    btn.disabled             = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method:  'POST',
+        body:    new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        // Success
+        successMsg.style.display = 'block';
+        btn.textContent          = 'Sent! ✓';
+        btn.style.background     = 'var(--leaf)';
+        contactForm.reset();
+      } else {
+        // Server error
+        errorMsg.style.display = 'block';
+        btn.textContent        = 'Send Message →';
+        btn.disabled           = false;
+      }
+    } catch (err) {
+      // Network error
+      errorMsg.style.display = 'block';
+      btn.textContent        = 'Send Message →';
+      btn.disabled           = false;
+    }
+  });
+}
