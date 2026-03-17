@@ -258,12 +258,19 @@
       </div>
 
       <!-- Form -->
-      <div class="form-wrap reveal">
-        <input    class="ff" type="text"  placeholder="Your name">
-        <input    class="ff" type="email" placeholder="Your email">
-        <textarea class="ff"              placeholder="Your message..."></textarea>
-        <button   class="ff-btn">Send Message →</button>
-      </div>
+      <form class="form-wrap reveal" id="contact-form" action="https://formspree.io/f/mwvrwylr" method="POST">
+        <input    class="ff" type="text"  name="name"    placeholder="Your name"      required>
+        <input    class="ff" type="email" name="email"   placeholder="Your email"     required>
+        <input    class="ff" type="text"  name="subject" placeholder="Subject">
+        <textarea class="ff"              name="message" placeholder="Your message..." required></textarea>
+        <button   class="ff-btn" type="submit" id="submit-btn">Send Message →</button>
+        <div id="form-success" style="display:none;">
+          <p>✓ Message sent! I'll get back to you soon.</p>
+        </div>
+        <div id="form-error" style="display:none;">
+          <p>Something went wrong. Please try again.</p>
+        </div>
+      </form>
 
     </div>
   </section>
