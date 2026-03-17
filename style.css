@@ -412,6 +412,28 @@ textarea.ff { height: 130px; resize: none; }
   box-shadow: 0 8px 25px rgba(45,74,45,0.2);
 }
 .ff-btn:hover { background: var(--leaf); transform: translateY(-2px); }
+.ff-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+#form-success {
+  margin-top: 0.5rem;
+  padding: 1rem 1.2rem;
+  background: rgba(122,171,110,0.12);
+  border: 1px solid rgba(78,124,78,0.25);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--leaf);
+  text-align: center;
+}
+#form-error {
+  margin-top: 0.5rem;
+  padding: 1rem 1.2rem;
+  background: rgba(200,80,80,0.08);
+  border: 1px solid rgba(200,80,80,0.2);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #c05050;
+  text-align: center;
+}
 
 /* ═══════════════════════════════════════════
    FOOTER
