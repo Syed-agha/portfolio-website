@@ -106,17 +106,6 @@ portfolio-website/
 
 ---
 
-## 🗂️ Project Showcased
-
-### 🖨️ DesignArt Portal — Real Client Project
-A production web portal built for **Design Arts**, a printing press company. Customers enter their Purchase Order No. or Product Code to track which stage their order is in — Printing → Pasting → Lamination → Cutting → Packing → Dispatch — all in real time. Admin panel allows the business to update order statuses.
-
-- 🔗 **Live:** [designarts-production.up.railway.app/tracking/Tracking.html](https://designarts-production.up.railway.app/tracking/Tracking.html)
-- 🛠️ **Stack:** JavaScript, Node.js, CSS, HTML — deployed on Railway
-- 📂 **Repo:** [github.com/Syed-agha/design_art_portal](https://github.com/Syed-agha/design_art_portal)
-
----
-
 ## 🎨 Design Tokens
 
 | Variable | Value | Used For |
